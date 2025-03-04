@@ -10,7 +10,7 @@ jobs:
     
     steps:
       - name: "Create a local file"
-        run: 
+        run:
           # Create a file named file.txt and write a detailed message into it
           echo "Hi, I am storing this data in this file, so that I can use this in the subsequent jobs within this workflow run. I will upload this file to GitHub storage and download from there when needed in this workflow run." > file.txt
 
@@ -33,8 +33,8 @@ jobs:
       - name: "Download the artifact"
         uses: actions/download-artifact@v4
         with:
-          name: file &nbsp;# Specify the name of the artifact to download
+          name: file # Specify the name of the artifact to download
       - name: "Printing the file content"
-        run: 
+        run:
           # Display the contents of the file.txt to check its content
           cat file.txt
